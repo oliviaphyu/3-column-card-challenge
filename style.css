@@ -20,6 +20,7 @@
 }
 
 body{
+    background-color: var(--very-light-gray);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -28,9 +29,10 @@ body{
 }
 
 .container{
-    max-width: 800px;
+    max-width: 835px;
     display: flex;
     border-radius: 0.5rem;
+    margin-top: 5rem;
 }
 
 .container .container-one{
@@ -61,6 +63,7 @@ h2{
     margin-top: 1.5rem;
     color: var(--very-light-gray);
     font-family: var(--font-family-big-shoulder);
+    font-size: 2.5rem;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -69,52 +72,81 @@ p{
     margin-top: 1.5rem;
     color: var(--transparent-white);
     font-family: var(--font-family-lexe);
-    font-size: 15px;
-    line-height: 25px;
+    font-size: 13px;
+    line-height: 1.4rem;
 }
 
 button{
     cursor: pointer;
     margin-top: 4rem;
-    padding: 0.7rem 1.2rem;
+    padding: 0.7rem 1.5rem;
     border-radius: 2rem;
     font-family: var(--font-family-lexe);
+    font-size: 0.9rem;
     font-weight: 400;
 }
 
 .container-one button{
     color: var(--bright-orange);
     background-color: var(--very-light-gray);
-    border: 1px solid var(--very-light-gray);
+    border: 2px solid var(--very-light-gray);
+    transition: all 200ms ease-in-out;
+}
+
+.container-one button:hover{
+    color: var(--very-light-gray);
+    background-color: var(--bright-orange);
+    border: 2px solid var(--very-light-gray);
 }
 
 .container-two button{
     color: var(--dark-cyan);
     background-color: var(--very-light-gray);
-    border: 1px solid var(--very-light-gray);
+    border: 2px solid var(--very-light-gray);
+    transition: all 200ms ease-in-out;
+}
+
+.container-two button:hover{
+    color: var(--very-light-gray);
+    background-color: var(--dark-cyan);
+    border: 2px solid var(--very-light-gray);
 }
 
 .container-three button{
     color: var(--very-dark-cyan);
     background-color: var(--very-light-gray);
-    border: 1px solid var(--very-light-gray);
+    border: 2px solid var(--very-light-gray);
+    transition: all 200ms ease-in-out;
 }
 
-@media (max-width: 800px) {
-    .container{
-        max-width: 750px;
-    }
+.container-three button:hover{
+    color: var(--very-light-gray);
+    background-color: var(--very-dark-cyan);
+    border: 2px solid var(--very-light-gray);
 }
 
-@media (max-width: 700px) {
-    .container{
-        max-width: 600px;
-    }
-}
+.attribution{
+    margin: 2rem;
+    text-align: center;
+    color: var(--dark-cyan);
+    font-family: var(--font-family-lexe);
+    font-size: 1.2rem;
+  }
+  
+  .attribution a{
+    color: var(--bright-orange);
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .attribution a:hover{
+    text-decoration: underline;
+  }
 
-@media (max-width: 601px) {
+@media (max-width: 850px) {
     body{
-        height: 250vh;
+        height: 270vh;
     }
     .container{
         max-width: 300px;
