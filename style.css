@@ -1,0 +1,130 @@
+:root{
+    /* Primary Colors */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Neutral Colors */
+    /* Paragraphs */
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    /* Background, Heading, Buttons */
+    --very-light-gray: hsl(0, 0%, 95%);
+
+    --font-family-lexe: 'Lexend Deca', sans-serif;
+    --font-family-big-shoulder: 'Big Shoulders Display', cursive;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    max-width: 800px;
+    display: flex;
+    border-radius: 0.5rem;
+}
+
+.container .container-one{
+    background-color: var(--bright-orange);
+    padding: 3rem;
+    flex: 1;
+    border-radius: 0.5rem 0 0 0.5rem;
+    max-height: 500px;
+}
+
+.container .container-two{
+    background-color: var(--dark-cyan);
+    padding: 3rem;
+    flex: 1;
+    border-radius: none;
+    max-height: 500px;
+}
+
+.container .container-three{
+    background-color: var(--very-dark-cyan);
+    padding: 3rem;
+    flex: 1;
+    border-radius: 0 0.5rem 0.5rem 0;
+    max-height: 500px;
+}
+
+h2{
+    margin-top: 1.5rem;
+    color: var(--very-light-gray);
+    font-family: var(--font-family-big-shoulder);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+p{
+    margin-top: 1.5rem;
+    color: var(--transparent-white);
+    font-family: var(--font-family-lexe);
+    font-size: 15px;
+    line-height: 25px;
+}
+
+button{
+    cursor: pointer;
+    margin-top: 4rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 2rem;
+    font-family: var(--font-family-lexe);
+    font-weight: 400;
+}
+
+.container-one button{
+    color: var(--bright-orange);
+    background-color: var(--very-light-gray);
+    border: 1px solid var(--very-light-gray);
+}
+
+.container-two button{
+    color: var(--dark-cyan);
+    background-color: var(--very-light-gray);
+    border: 1px solid var(--very-light-gray);
+}
+
+.container-three button{
+    color: var(--very-dark-cyan);
+    background-color: var(--very-light-gray);
+    border: 1px solid var(--very-light-gray);
+}
+
+@media (max-width: 800px) {
+    .container{
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 700px) {
+    .container{
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 601px) {
+    body{
+        height: 250vh;
+    }
+    .container{
+        max-width: 300px;
+        flex-direction: column;
+    }
+    .container .container-one{
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .container .container-three{
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+}
