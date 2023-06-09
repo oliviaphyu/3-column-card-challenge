@@ -21,7 +21,7 @@
 
 body{
     background-color: var(--very-light-gray);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -145,9 +145,6 @@ button{
   }
 
 @media (max-width: 850px) {
-    body{
-        height: 270vh;
-    }
     .container{
         max-width: 300px;
         flex-direction: column;
